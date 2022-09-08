@@ -11,7 +11,7 @@ class Solution(object):
         for i in range(len(nums)):
             left_sum += nums[i]
             right_sum=sum(nums[i:])
-            print(right_sum)
+           
             if left_sum==right_sum:
                 return i
 
