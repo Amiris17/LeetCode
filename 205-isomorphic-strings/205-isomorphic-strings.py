@@ -8,7 +8,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        #new approach make two lists and just compare
+        
         MAPST={}
         MAPTS={}
         for i in range(len(s)):
@@ -18,6 +18,8 @@ class Solution(object):
                 return False
             
             
+            
+            #print (MAPST.keys())
             
             
             MAPST[p1]=p2
