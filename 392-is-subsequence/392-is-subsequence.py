@@ -6,15 +6,17 @@ class Solution(object):
         :rtype: bool
         """
         #s of t
+        #TLDR Basically attempt1: we tried to manipulate the string however order came into play and stumped it so we instead  looped through using a WHILE LOOP because it gives us control over how we increment as opposed to a for loop. this allows us to check everything in string T with the current character string s and if we find a match increment s's index by one. 
         
-        new_str=""
+        
+        #new_str=""
         if len(s)==0:
             return True
-        n,m=len(s),len(t)
+        len1,len2=len(s),len(t)
         i,j=0,0
         
-        while (i<n and j<m):
+        while (i<len1 and j<len2):
             if s[i]==t[j]:
                 i+=1
             j+=1
-        return i==n
+        return i==len1
