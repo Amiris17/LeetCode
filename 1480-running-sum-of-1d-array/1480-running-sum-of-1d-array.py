@@ -5,14 +5,14 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        left_sum=nums[0]
+        left_sum=0
         
         
         for i in range(len(nums)):
-            
-            #we need to replace the i at the index we are at
-            if i >0:
-                left_sum+=nums[i]
+            left_sum+=nums[i]
+            #after the first element, the running sum can bne computed normally.
+            if i:
+                
                 nums[i]=left_sum
             
             
