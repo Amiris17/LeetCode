@@ -8,7 +8,7 @@ class Solution(object):
             if char in "0123456789":
                 digit=True
             elif char in "-+":
-                if symbol or digit or dec:
+                if symbol or digit or dec: #we are manually assigning these values to be true based on conditions # if we see symbol or digit or decimal before we encounter -+ then it is automatically false.
                     return False
                 else:
                     symbol=True
