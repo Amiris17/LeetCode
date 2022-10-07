@@ -18,4 +18,4 @@ class Solution(object):
         for i in salary:
             result+=i
             count+=1
-        return float(result/count)
+        return (result/count)
