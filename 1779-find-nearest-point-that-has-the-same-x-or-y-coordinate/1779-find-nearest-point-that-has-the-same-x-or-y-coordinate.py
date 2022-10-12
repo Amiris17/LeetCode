@@ -6,7 +6,7 @@ class Solution(object):
         :type points: List[List[int]]
         :rtype: int
         """
-        bestD=10**10
+        bestD=10**4
         besti=-1
         
         
