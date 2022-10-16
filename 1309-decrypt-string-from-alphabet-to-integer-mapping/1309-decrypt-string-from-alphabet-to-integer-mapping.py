@@ -1,34 +1,24 @@
-class Solution:
-    def freqAlphabets(self, s: str) -> str:
-            d = {
-            '1': 'a',
-            '2': 'b',
-            '3': 'c',
-            '4': 'd',
-            '5': 'e',
-            '6': 'f',
-            '7': 'g',
-            '8': 'h',
-            '9': 'i',
-            '10#': 'j',
-            '11#': 'k',
-            '12#': 'l',
-            '13#': 'm',
-            '14#': 'n',
-            '15#': 'o',
-            '16#': 'p',
-            '17#': 'q',
-            '18#': 'r',
-            '19#': 's',
-            '20#': 't',
-            '21#': 'u',
-            '22#': 'v',
-            '23#': 'w',
-            '24#': 'x',
-            '25#': 'y',
-            '26#': 'z',
-        }
-            
-            
-            return ''.join([d[i] for i in re.findall(r'\d{2}#|\d', s)])
+class Solution(object):
+    def freqAlphabets(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        resulting_str=[]
+        i=0
+        while i<len(s):
+            if i+2 <len(s) and s[i+2]=="#":
+                val=int(s[i: i+2])
+                resulting_str.append(chr(val+96))# its +96 cause character is from 1-9 lol...
+                i+=3
+            else:
+                resulting_str.append(chr(int(s[i])+96))
+                i+=1
         
+        return "".join(resulting_str)
+        
+        
+        
+        
+        
+            
