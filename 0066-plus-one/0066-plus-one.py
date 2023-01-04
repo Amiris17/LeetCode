@@ -20,6 +20,6 @@ class Solution(object):
         #print(int_num)#adds perfectly
         
         
-        list_nums= map(int,str(int_num)) #array of chars ,map requires two arguments
+        list_nums= map(int,str(int_num)) #array of chars ,map requires two arguments its like a for loop that does a function on the iterables str being the iterable here and we want integer as a return from the list int_num
         
         return list_nums
