@@ -17,9 +17,9 @@ class Solution(object):
         b=int(b,2)
         
         
-        while(a!=0):
-            b,a=(b^a),(b&a) <<1
-        return "{0:b}".format(b)
+        while(b!=0):
+            a,b=(a^b),(a&b) <<1
+        return "{0:b}".format(a)
         
         
         
