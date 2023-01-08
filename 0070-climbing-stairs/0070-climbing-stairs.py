@@ -5,18 +5,17 @@ class Solution(object):
         :rtype: int
         """
 
-        f_0=1
-        f_1=2
+        sqrt5 = 5**0.5 #BNETS FORMULA
+        
+      
         
         
-        tmp=0
+        ans = ((1+sqrt5)/2)**(n+1) - ((1-sqrt5)/2)**(n+1)
         
-        if n<=2:
-            return n
+        ans = int(ans/sqrt5)
         
-        for i in range(n-2):
-            tmp=f_0+f_1
-            f_0=f_1
-            f_1=tmp
-            
-        return tmp
+        return ans
+    
+        
+        
+    
