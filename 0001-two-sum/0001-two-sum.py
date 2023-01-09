@@ -9,8 +9,22 @@ class Solution(object):
         
         #we can brute force or use two pointer solution i dont remember hash table
         
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return i,j
-      
+        beg=0
+        end=len(nums)-1
+        res=0
+        
+        
+        
+        while beg<end:
+            if nums[beg]+nums[end]==target:
+                return beg,end
+            
+            end-=1
+            
+            if beg==end:
+                beg+=1
+                end=len(nums)-1
+                
+                
+            
+          
