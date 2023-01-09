@@ -5,30 +5,23 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        if len(s)!=len(t):
-            return False
-        
-        
-        if len (s) ==0 or len(t)==0:
-            return False
-        
-
         dict1={}
         dict2={}
         
-        for i in s:
-            if i in dict1: #If weve seen it before increase count
-                dict1[i]+=1
-            else:          #if weve never seen count=1 repeat get counht for both strings gg    
-                dict1[i]=1
-                
-                
-        for j in t:
-            if j in dict2:
-                dict2[j]+=1
-            else:
-                dict2[j]=1
-            
-        return dict1==dict2
+        #create a hash table and if each word is of equal letter usage. then return True return statement betwene two of em
         
-       
+        
+        
+        for i in range(len(s)):
+            if s[i] not in dict1:
+                dict1[s[i]]=1
+            else:
+                dict1[s[i]]+=1
+        for i in range(len(t)):
+            if t[i] not in dict2:
+                dict2[t[i]]=1
+            else:
+                dict2[t[i]]+=1
+        
+        
+        return dict1==dict2
