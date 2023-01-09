@@ -11,9 +11,14 @@ class Solution(object):
         
         #second create a hash and just false if its ever added
         
-        set1=set(nums)
+        dup_list={}
         
-        return len(set1)!=len(nums)
-            
+        
+        for i in nums:
+            if i not in dup_list:
+                dup_list[i]=i
+            else:
+                return True
+        return False
             
             
