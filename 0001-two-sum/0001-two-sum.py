@@ -1,14 +1,26 @@
 class Solution(object):
-    def twoSum(self,numbers,target):
+    def twoSum(self,nums,target):
         
         
-        hash_={}
-        for i in range(len(numbers)):
-            if target-numbers[i] in hash_:
-                return [hash_[target-numbers[i]],i]
-            hash_[numbers[i]]=i
-        return [-1,-1]
+        # we only caer about indices
+        
+        
+        beg=0
+        end=len(nums)-1
+        res=0
+        
+        
+        
+        while beg<end:
+            if nums[beg]+nums[end]==target:
+                return beg,end
             
+            end-=1
+            
+            if beg==end:
+                beg+=1
+                end=len(nums)-1
+    
             
             
             
