@@ -14,7 +14,7 @@ class Solution(object):
         print(str_n)
         
         count=0
-        test=[]
+        
         for i in str_n:
             print(i)
             if i=="1":
