@@ -1,4 +1,3 @@
-from math import log
 class Solution(object):
     def getSum(self, a, b):
         """
@@ -7,12 +6,10 @@ class Solution(object):
         :rtype: int
         """
         
-        x=pow(2,a)
-        y=pow(2,b)
-        z=x*y
-        return int(log(z,2))
+        ##convert to binary
         
        
     
-    
+        return sum([a,b])
+        
         
